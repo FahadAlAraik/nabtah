@@ -1,0 +1,11 @@
+.plant-icon {
+    fill:rgb(0, 112, 150);
+    width: 96px;
+    height: 96px;
+}
+
+.plant-title {
+    color:rgb(0, 0, 0);
+    margin-top: 15px;
+    font-weight: lighter;
+}

@@ -1,0 +1,24 @@
+.navbar-nav .nav-link  {
+    font-size: 1.55em;
+    margin: 0 15px 0 15px;
+    font-weight: lighter;
+    color:#555c79;
+    font-family: 'Poppins';
+}
+
+.navbar-nav .nav-link svg {
+    color:#555c79;
+    margin: 0 15px 0 15px;
+    width: 38px;
+    height: 38px;
+}
+
+.navbar-nav .nav-link svg:hover, .navbar-nav a:hover {
+color:black
+}
+
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(85 92 121)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")!important;
+}
+

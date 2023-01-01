@@ -1,0 +1,23 @@
+
+
+.form-control:focus {
+    border-color:navy;
+    color:black;
+}
+
+.form-control {
+    border-color:#555c79;
+    border:2px soild  #555c79
+}
+
+.form-floating {
+    position: relative;
+}
+
+.hide-show-password {
+    position: absolute;
+    top:30%;
+    right: 3%;
+    width: 24px;
+    height: 24px;
+}

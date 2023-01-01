@@ -1,0 +1,45 @@
+.lkjDVC {
+    border-radius: 50px;
+    border:2px dashed #555c79!important;
+    background-color: #a399bb24;
+    color:#666;
+    margin: auto;
+    padding: 75px!important;
+    font-size: 1rem!important;
+    
+}
+
+/* label text */
+.bXgVCj {
+    color: #555c79!important;
+    font-size:1.5rem !important;
+    font-weight: lighter;
+    font-family: 'Poppins';
+}
+
+.lkjDVC svg {
+    
+    width: 96px;
+    height: 96px;
+}
+
+label path {
+    fill: #555c79!important;
+    width: 64px;
+    height: 64px;
+}
+
+label .sc-bcXHqe {
+   padding: 50px;
+}
+
+/*Span container for upload image here and types*/
+.dmajdp  {
+    
+    color: #555c79!important;
+    justify-content: center!important;
+    text-align: center;
+    align-items: center!important;
+    align-self: center!important;
+
+}
