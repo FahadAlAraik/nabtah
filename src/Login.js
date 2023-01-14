@@ -23,7 +23,7 @@ function Login() {
    
     
 
-    const [email,updateEmail] = useState('')
+    const [phoneNumber,updatePhoneNumber] = useState('')
     const [password,updatePassword] = useState('')
     const [remember,updateRemember] = useState('')
     const [error,updateError] = useState('')
@@ -34,7 +34,7 @@ function Login() {
     
 
     function changeEmail(e) {
-        updateEmail(e.target.value)
+        updatePhoneNumber(e.target.value)
     }
 
     function changePassword(e) {
@@ -43,11 +43,14 @@ function Login() {
 
     function handleSubmit(e) {
         e.preventDefault()
-        const responds =   axios.post("http://localhost:5000/login",{email,password,remember},{ withCredentials: true })
+        const responds =   axios.post("http://localhost:5000/login",{'phone-number':phoneNumber,password,remember},{ withCredentials: true })
                          .then(resp => {
                             if(resp.status == 200 && resp.data != 'error') {
-                                localStorage.setItem('logged', true);
-                                window.location.href = '/'}
+                                sessionStorage.setItem('logged', true);
+                                sessionStorage.setItem('name',resp.data)
+                                console.log(resp)
+                                window.location.href = '/'
+                            }
 
                             else {
                                 updateError('Wrong Email or Password')
@@ -71,7 +74,7 @@ function Login() {
                     <h1 className='text-left Poppins'>Login</h1>
                     <Form className='mt-5'>
                         <FloatingLabel controlId="floatingInput"  label="Email address or phone number" className="mb-3">
-                            <Form.Control type="email" name="email"  className='shadow-none ' placeholder="name@example.com" onChange={(e) => updateEmail(e.target.value)} />
+                            <Form.Control type="email" name="phone-number"  className='shadow-none ' placeholder="name@example.com" onChange={(e) => updatePhoneNumber(e.target.value)} />
                         </FloatingLabel>
 
                         <FloatingLabel controlId="floatingInput"  label="Password" className="mb-3">

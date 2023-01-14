@@ -12,6 +12,7 @@ import LandingPage from "./LandingPage";
 import Objectives from "./Objectives";
 import Plants from "./Plants";
 import Footer from "./Footer";
+import History from "./History";
 
 export default function Home() {
 

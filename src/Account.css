@@ -1,0 +1,15 @@
+.hide-show-password-account {
+    position: absolute;
+    right:9%; 
+    top:56%;
+    width: 24px;
+    height: 24px;
+}
+
+.edit-icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right:3%;
+    top:56%;
+}

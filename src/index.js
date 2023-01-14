@@ -7,6 +7,7 @@ import './Login.css'
 import './Plants.css'
 import './UploadImage.css'
 import './PredictionResult.css'
+import './Account.css'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Home from './Home';

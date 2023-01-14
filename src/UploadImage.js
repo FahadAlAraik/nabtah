@@ -6,6 +6,7 @@ import {BsUpload} from 'react-icons/bs';
 import { Button, Col, Container, Row, Alert } from 'react-bootstrap';
 import { FileUploader } from "react-drag-drop-files";
 import PredictionResult from './PredictionResult';
+import Footer from './Footer';
 
 const fileTypes = ["JPEG", "PNG","JPG"];
 function UploadPage() {
@@ -15,7 +16,7 @@ function UploadPage() {
     const [URLState,setURL] = useState(null)
     const [apiResult, updateResult] = useState(null)
     const [err,updateErr] = useState(false);
-  
+    const [errUpload,updateErrUpload] = useState(null)
 
     useEffect(() => {
       setVisible(true)
@@ -38,12 +39,13 @@ function UploadPage() {
         const fd = new FormData()
         fd.append('img',file,file.name)
         console.log(fd)
-         await axios.post('http://localhost:5000/image',fd)
+         await axios.post('http://localhost:5000/image',fd,{withCredentials:true})
         .then(res => {
             
+            console.log(res.data)
             updateResult(res.data)
-            
-        })
+
+        }).catch(err => updateErrUpload('Sorry, this file image is too large, please try cropping the content.'))
         
     }
 
@@ -71,6 +73,8 @@ function UploadPage() {
       
       />
       <br />
+      {errUpload != null &&<Alert style={{width:'30%',margin:'auto'}} variant='warning'>{errUpload}</Alert> }
+      <br />
       {URLState && <img src={URLState} />}
       <br />
       <p style={{fontFamily:'Poppins',fontWeight:'lighter'}}>{file ? `File name: ${file.name}` : "no files uploaded yet"}</p>
@@ -81,8 +85,9 @@ function UploadPage() {
       </Col>
       </Row>
       {err &&<Alert style={{width:'30%',margin:'auto'}} variant='warning'>You haven't uploaded an image!</Alert> }
+      
     </Container>
-    
+    <Footer />
         </>
     );
 
@@ -90,8 +95,8 @@ function UploadPage() {
       return (
               <>
               <NavigationBar />
-              <PredictionResult plantName = {apiResult.plant_name} diseaseName={apiResult.disease} probability = {(100* apiResult.probability).toFixed(0)} imgSRC = {URLState} description = {apiResult.description} treatment = {apiResult.treatment} /> 
-              
+              <PredictionResult plantName = {apiResult.plant_name} diseaseName={apiResult.disease} probability = {(100* apiResult.probability).toFixed(1)} imgSRC = {URLState} description = {apiResult.description} treatment = {apiResult.treatment} /> 
+              <Footer />
               </>
                
       );

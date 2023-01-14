@@ -13,21 +13,16 @@ import { Link } from 'react-router-dom';
 
 function NavigationBar() {
 
-    const [user,setUser] = useState('')
-    
+    const [user,setUser] = useState(sessionStorage.getItem('name'))
 
     useEffect(() => {
-        axios.post("http://localhost:5000/@logged",{},{  withCredentials: true })
-        .then(resp => {
-            if (resp.status == 200 && resp.data != 'UNAUTHORIZED') {
-                sessionStorage.setItem('logged', true);
-                setUser(resp.data)
-            }
-            else
-            sessionStorage.removeItem('logged')
-        },[])
-        .catch(err => console.log)
+        setUser(sessionStorage.getItem('name'))
+        axios.get('http://localhost:5000/getCookie',{withCredentials:true})
+        .then(resp => console.log(resp))
     },[])
+    
+
+    
 
     if(!sessionStorage.getItem('logged'))
         return (
@@ -72,10 +67,10 @@ function NavigationBar() {
             </Nav>
             <Nav>
                 <NavDropdown title={`Signed in as ${user}`} id="basic-nav-dropdown" style={{fontSize:'0.75em',marginTop:'10px'}}>
-                    <NavDropdown.Item style={{fontsize:'0.75em'}} href="#action/3.1">Account</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.1">History</NavDropdown.Item>
+                    <NavDropdown.Item style={{fontsize:'0.75em'}} href="/account">Account</NavDropdown.Item>
+                    <NavDropdown.Item href="/history">History</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item onClick={() => {axios.post("http://localhost:5000/logout",{},{withCredentials:true}).then(resp => {sessionStorage.removeItem("logged");window.location.href = '/'})}}>Logout</NavDropdown.Item>
+                    <NavDropdown.Item onClick={() => {axios.post("http://localhost:5000/logout",{},{withCredentials:true}).then(resp => {sessionStorage.removeItem("logged");sessionStorage.removeItem("name");window.location.href = '/'})}}>Logout</NavDropdown.Item>
                 </NavDropdown>
                     <Nav.Link>
                         <MdOutlineLanguage  />
