@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
-import './NavigationBar.css'
-import './Login.css'
-import './Plants.css'
-import './UploadImage.css'
-import './PredictionResult.css'
-import './Account.css'
+import './NavigationBar.css';
+import './Login.css';
+import './Plants.css';
+import './UploadImage.css';
+import './PredictionResult.css';
+import './About.css';
+import './Account.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Home from './Home';

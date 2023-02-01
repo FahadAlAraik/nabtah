@@ -13,7 +13,7 @@ import NavigationBar from './NavigationBar';
 import plant_pot from './icons/plant-pot.png';
 import {FaRegEyeSlash} from 'react-icons/fa'
 import {FaRegEye} from 'react-icons/fa'
-
+import Footer from './Footer'
 
 
 function Login() {
@@ -110,6 +110,7 @@ function Login() {
                     </Alert>}
 
         </Container>
+        <Footer />
 
 
         {/* <Container style={{marginTop:'50px'}}>

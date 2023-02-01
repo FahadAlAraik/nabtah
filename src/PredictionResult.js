@@ -64,7 +64,7 @@ function PredictionResult(props) {
 
 
                     <Col className=' align-items-center align-self-center justify-content-center text-center'>
-                        <img src={props.imgSRC} style={{borderRadius:'25px'}} />
+                        <img src={props.imgSRC} style={{borderRadius:'25px',width:'450px',height:'450px'}} />
                     </Col>
 
                     <Row className='mt-5  Poppins suggested-treatment-card' >

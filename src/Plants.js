@@ -19,30 +19,33 @@ function Plants() {
             <Row className='justify-content-center' style={{margin:'95px'}}>
                 <Col className='text-center' md={3}>
                     <GiCherry className='plant-icon m-3' />
-                    <h2 className=' mt-2 plant-title'>Cherry</h2>
+                    <h3 className='Poppins mt-2 plant-title'>Cherry</h3>
+                    <small className='form-text'>Healthy, Powdery Mildew</small>
                 </Col>
                 <Col className='text-center' md={3}>
                     <GiCorn className='plant-icon m-3' />
-                    <h2 className=' mt-2 plant-title'>Corn</h2>
+                    <h3 className='Poppins mt-2 plant-title'>Corn</h3>
+                    <small className='form-text'>Healthy, Common Rust</small>
                 </Col>
                 <Col className='text-center' md={3}>
                     <GiGrapes className='plant-icon m-3' />
-                    <h2 className=' mt-2 plant-title'>Grape</h2>
+                    <h3 className='Poppins mt-2 plant-title'>Grape</h3>
+                    <small className='form-text'>Healthy, Esca (Black_Measles), Black Rot </small>
                 </Col>
             </Row>
 
             <Row className='justify-content-center' style={{margin:'95px'}}>
                 <Col className='text-center' md={3}>
                     <GiChiliPepper className='plant-icon m-3' />
-                    <h2 className=' mt-2 plant-title'>Pepper</h2>
+                    <h3 className='Poppins mt-2 plant-title'>Pepper</h3>
                 </Col>
                 <Col className='text-center' md={3}>
                     <GiPotato className='plant-icon m-3' />
-                    <h2 className=' mt-2 plant-title'>Potato</h2>
+                    <h3 className='Poppins mt-2 plant-title'>Potato</h3>
                 </Col>
                 <Col className='text-center' md={3}>
                     <GiTomato className='plant-icon m-3' />
-                    <h2 className=' mt-2 plant-title'>Tomato</h2>
+                    <h3 className='Poppins mt-2 plant-title'>Tomato</h3>
                 </Col>
             </Row>
 

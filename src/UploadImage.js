@@ -64,8 +64,9 @@ function UploadPage() {
         
         <>
         <NavigationBar />
-        <h1 className='text-capitalize text-center pb-2' style={{fontWeight:'lighter',color:'#212529',fontSize:'3rem',marginTop:'55px'}}>Upload the plant image here</h1>
-        <Container className="justify-content-center text-center mt-4">
+       
+        <Container className="justify-content-center text-center bg-light p-3" style={{borderRadius:'35px',marginTop:'75px'}}>
+        <h1 className='text-capitalize text-center pb-2 mb-4' style={{fontWeight:'lighter',color:'#212529',fontSize:'3.5rem',marginTop:'55px'}}>Upload the plant image here</h1>
       <FileUploader
         id="test"
         handleChange={handleChange}
@@ -80,8 +81,8 @@ function UploadPage() {
       <p style={{fontFamily:'Poppins',fontWeight:'lighter'}}>{file ? `File name: ${file.name}` : "no files uploaded yet"}</p>
       
       <Row className='justify-content-center'>
-      <Col style={{fontFamily:'Poppins'}} ><Button variant='dark' className='m-3' onClick={handlePrediction}>Predict Disease</Button> 
-            <Button variant='secondary' className='m-3'>Identify Plant</Button>
+      <Col style={{fontFamily:'Poppins'}} ><Button variant='dark' className='m-3' onClick={handlePrediction}>Predict Disease/Identify Plant</Button> 
+      
       </Col>
       </Row>
       {err &&<Alert style={{width:'30%',margin:'auto'}} variant='warning'>You haven't uploaded an image!</Alert> }

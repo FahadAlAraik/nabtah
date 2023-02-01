@@ -12,6 +12,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'
 import {FaRegEyeSlash} from 'react-icons/fa'
 import {FaRegEye} from 'react-icons/fa'
+import Footer from './Footer';
 
 function Register() {
 
@@ -125,7 +126,7 @@ function Register() {
                                     <Form.Control type={type} name="confirm-password"  className='shadow-none ' style={{border:cpasswordBorder}} placeholder="name@example.com" onChange={((e)=> updateCPassword(e.target.value) )} />
                                     {!showHide?<FaRegEyeSlash className='hide-show-password' style={{fill:'#555c79'}} onClick={(e) => {updateType('text');updateShowHide(!showHide)}}/>: <FaRegEye onClick={(e) =>{updateType('password');updateShowHide(!showHide)}} className='hide-show-password' /> }
                                 </FloatingLabel>
-
+                                <br />
                                 <Button variant="dark" type="submit" onClick={handleRegister}>
                                 Register
                                 </Button>
@@ -145,6 +146,7 @@ function Register() {
                 Nice!, You have Successfully Registered, now please proceed to the <Link to='/login'>login page</Link>
             </Alert>}
          </Container>
+         <Footer />
 
        </>
         
