@@ -10,26 +10,73 @@
 }
 
 .result-card {
+    animation: fadeIn 2s;
     background-color: #EDF1F3;
-    padding: 35px;
+    height: 276px;
     border-radius: 25px;
+    opacity: 1;
+    align-items: center;
 
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+       opacity: 1;
+    }
+  }
 
 .disease-info-card {
+    animation:fadeInDesc 3s;
     background-color: #EDF1F3;
-    padding: 37px;
+    padding: 20px;
     border-radius: 25px;
+    opacity: 1;
+    margin-bottom: 25px;
 }
+
+@keyframes fadeInDesc {
+    from {
+        opacity: 0;
+    }
+    to {
+       opacity: 1;
+    }
+  }
 
 .suggested-treatment-card {
 
+    animation:fadeInSugg 3.7s;
     background-color: #EDF1F3;
-    padding: 37px;
-    border-radius: 50px;
+    padding: 20px;
+    border-radius: 25px;
+    margin-top:25px;
+    opacity: 1;
+    margin-left: auto;
+    margin-right: auto   ;
     
    
 }
+
+@keyframes fadeInDesc {
+    from {
+        opacity: 0;
+    }
+    to {
+       opacity: 1;
+    }
+  }
+
+  @keyframes fadeInSugg {
+    from {
+        opacity: 0;
+    }
+    to {
+       opacity: 1;
+    }
+  }
 
 .title-card {
     color: #46464694;
@@ -42,4 +89,8 @@
     .container-result {
         max-width: 1550px;
     }
+}
+
+.back-icon:hover {
+    cursor:pointer;
 }

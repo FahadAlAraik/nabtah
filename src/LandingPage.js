@@ -26,18 +26,18 @@ function LandingPage() {
 
             <Row>
 
-                <Col className='align-self-center align-items-center justify-content-end ' >
+                <Col className='align-self-center align-items-center justify-content-end m-4' >
                     <p className='landing-page-content'>Detecting Plant<br /> diseases have <br /> never been  <br /> <span style={{color:'#FF8888'}}>easier</span>
                     <br />
-                    <span onClick={handleUpload} className='mt-3 p-3 span-hover' style={{fontSize:'1.75rem',textAlign:'center',display:'block',background:'black',borderRadius:'15px'}}>
+                    <span onClick={handleUpload} className='mt-3 p-3 span-hover'>
                         <BsUpload /> Upload Image
                     </span>
                     </p>
                 
                 </Col>
                 
-                <Col className='text-end'>
-                    <img src={happy_plant} />
+                <Col className='text-center'>
+                    <img  src={happy_plant} className='landing-page-image' />
                 </Col>
 
             </Row>

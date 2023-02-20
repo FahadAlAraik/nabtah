@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import  NavDropdown  from 'react-bootstrap/NavDropdown';
-import logo from './icons/logo.png'
+import logo from './icons/logo-eng.png'
 import {AiOutlineUser} from 'react-icons/ai'
 import {MdOutlineLanguage} from 'react-icons/md'
 import { Link } from 'react-router-dom';
@@ -26,16 +26,15 @@ function NavigationBar() {
 
     if(!sessionStorage.getItem('logged'))
         return (
-            <Navbar className='p-3 mt-2' expand="xl" >
+            <Navbar className=' p-1' expand="xl" >
             <Container fluid>
-            <Navbar.Brand href="/"><img src={logo} style={{width:'200px'}}  /></Navbar.Brand>
+            <Navbar.Brand href="/" ><img src={logo} className='logo-image'   /></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" className='justify-content-between'>
-                    <Nav className=" text-capatalize " style={{marginLeft:'50px'}}>
+                    <Nav className=" text-capatalize ">
                     <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="#objectives">Objectives</Nav.Link>
-                    <Nav.Link href="#plants">Plants</Nav.Link>
-                    <Nav.Link href="about">About</Nav.Link>
+                    <Nav.Link href="/about">About</Nav.Link>
+                    <Nav.Link href="/docs">Documentation</Nav.Link>
             </Nav>
             <Nav>
                     <Nav.Link href="/login">
@@ -54,16 +53,15 @@ function NavigationBar() {
 
     else {
         return (
-            <Navbar className='p-3 mt-2' expand="xl" >
+            <Navbar className='p-1' expand="xl" >
             <Container fluid>
-            <Navbar.Brand href="/"><img src={logo} style={{width:'200px',marginRight:'50px'}} /></Navbar.Brand>
+            <Navbar.Brand href="/"><img src={logo}  className='logo-image'/></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" className='justify-content-between'>
                     <Nav className=" text-capatalize">
                     <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="/#objectives">Objectives</Nav.Link>
-                    <Nav.Link href="#plants">Plants</Nav.Link>
                     <Nav.Link href="/about">About</Nav.Link>
+                    <Nav.Link href="/docs">Documentation</Nav.Link>
             </Nav>
             <Nav>
                 <NavDropdown title={`Signed in as ${user}`} id="basic-nav-dropdown" style={{fontSize:'0.75em',marginTop:'10px'}}>

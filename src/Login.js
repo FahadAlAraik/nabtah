@@ -69,7 +69,7 @@ function Login() {
       
         <Container  style={{marginTop:'75px'}} >
 
-            <Row  className='justify-content-center'>
+            <Row  className='justify-content-center d-flex login-reverse-row'>
                 <Col className='align-items-center align-self-center'>
                     <h1 className='text-left Poppins'>Login</h1>
                     <Form className='mt-5'>
@@ -96,8 +96,8 @@ function Login() {
                     </Form>
                 </Col>
                   
-                <Col className='text-right' >
-                <img src={plant_pot} style={{height:'400px',width:'400px',float:'right'}} />
+                <Col className='text-center mb-4' lg={4} >
+                <img className='login-page-image' src={plant_pot} />
                 </Col>
             </Row>
 

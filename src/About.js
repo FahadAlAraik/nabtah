@@ -26,6 +26,7 @@ function About(props) {
             Nabtah is our bachelor degree graduation project requirement for King Saud University. All of the treatment suggested are taken from <a href='https://www.gardeningknowhow.com/' target='_blank' style={{textDecoration:'None'}}>Gardening Know How
             </a> is a website that aims to help people grow their gardens, it offers a variety of information regarding plant's and their diseases, as well as suggests treatments for them. </p>
             
+            </Container >
             <h1 className='mb-5' style={{fontWeight:'lighter',fontSize:'3.5em',color: '#3d4460',marginTop:'105px',textAlign:'center'}}>Meet The Team</h1>
             <Carousel variant="dark" interval={null}>
                 <Carousel.Item >
@@ -65,11 +66,13 @@ function About(props) {
                 </Carousel.Item>
                
             </Carousel>
-            <h1  style={{marginTop:'105px',fontWeight:'lighter',fontSize:'3.5em',color: '#3d4460',textAlign:'center'}}>Vision</h1>
+
+            
+            <Container style={{marginTop:'65px',padding:'35px 35px 35px 35px',background:'rgb(237 239 243 / 68%)',borderRadius:'35px'}}>
+            <h1  style={{fontWeight:'lighter',fontSize:'3.5em',color: '#3d4460',textAlign:'center'}}>Vision</h1>
             <p className='mb-3' style={{textAlign:'justify',marginTop:'50px',fontSize:'1.25rem'}}>Our vision is to make Nabtah a large agriculture platform that can gather data from farmers or gardeners
             and help them detect their crops diseases or even raise awarness of a new surfaced disease through out Saudi Arabia. We plan to collect more data about more diseases and add them to
             our machine learning model to make it more comprehensive for all plants. Currently our model does not support all plants, since we lack the data (images) for them.</p>
-
         </Container>
         <br />
         <Footer />

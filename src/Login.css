@@ -23,3 +23,29 @@
     
 }
 
+.login-page-image {
+    width: 400px;
+    height: 400px;
+}
+
+@media screen  and (max-width:576px) {
+
+    .login-page-image {
+        width: 296px;
+        height: 296px;
+    }
+
+}
+
+@media screen  and (max-width:991px) {
+
+    .login-page-image {
+        width: 316px;
+        height: 316px;
+    }
+
+   .login-reverse-row {
+    flex-direction: column-reverse;
+   }
+
+}

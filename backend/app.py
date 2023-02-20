@@ -21,7 +21,7 @@ app = Flask(__name__)
 
 
 
-#app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(minutes=30)
+
 
 
 CORS(app,supports_credentials=True)
@@ -59,7 +59,6 @@ def getImage():
     plant_name = str(labels.inverse_transform(pred_result)[0]).replace("___"," ") # get the identification name
     today = (datetime.now()).strftime("%d/%m/%Y %H:%M:%S")# this is a timestamp for using it as a primay key in history database
     phoneNumber = request.cookies.get('phone_number') # get the phone number in cookie because it is the primary key for database
-  
     # if the image is not a plant
     if labels.inverse_transform(pred_result)[0] == 'Non___plant':
         #database connection
@@ -71,7 +70,6 @@ def getImage():
         fileType = imageFile.content_type.split('/')[-1]
         img.save(f"test.{fileType}")
         blob_value = open(f'test.{fileType}', 'rb').read()
-        print(blob_value)
         os.remove(f'test.{fileType}')
         #insert query in history table
         sql = 'INSERT INTO history(Phone_Number,Plant_Name,date,accuracy,Image) VALUES(%s,%s,%s,%s,%s)'    
@@ -91,7 +89,6 @@ def getImage():
         fileType = imageFile.content_type.split('/')[-1]
         img.save(f"test.{fileType}")
         blob_value = open(f'test.{fileType}', 'rb').read()
-        print(blob_value)
         os.remove(f'test.{fileType}')
         #insert query in history table
         sql = 'INSERT INTO history(Phone_Number,Plant_Name,date,accuracy,Image) VALUES(%s,%s,%s,%s,%s)'    
@@ -119,7 +116,7 @@ def getImage():
         fileType = imageFile.content_type.split('/')[-1]
         img.save(f"test.{fileType}")
         blob_value = open(f'test.{fileType}', 'rb').read()
-        print(blob_value)
+    
         os.remove(f'test.{fileType}')
         #insert query in history table
         sql = 'INSERT INTO history(Phone_Number,Plant_Name,date,accuracy,Image) VALUES(%s,%s,%s,%s,%s)'    
@@ -134,7 +131,7 @@ def login():
     mydb = mysql.connector.connect(host="localhost",user="root",passwd="root",database="mydb")
     cursor = mydb.cursor(dictionary=True)
     phone_number = request.json['phone-number']
-    print(phone_number)
+   
     password = request.json['password']
     remember = request.json['remember']
     cursor.execute(f"select * from user where Phone_Number like '{phone_number}' and Password like '{password}'")
@@ -187,7 +184,7 @@ def getUser():
 
 @app.route('/getCookie')
 def getCookie():
-    print(request.cookies.get('user'))
+  
     print('user' in request.cookies)
     return '5'
    
@@ -283,3 +280,4 @@ def findByPhoneNumber(phone_number,password,first_name,last_name):
 
 if __name__ == '__main__':
     app.run(debug=True)
+

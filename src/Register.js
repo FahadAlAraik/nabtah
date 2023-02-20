@@ -93,7 +93,7 @@ function Register() {
          <Container style={{marginTop:'75px'}}>
  
         
-            <Row className='justify-content-center'>
+            <Row className='justify-content-center d-flex login-reverse-row'>
                 <Col className='align-items-center align-self-center'>
                     <h1 className='Poppins text-left'>Register</h1>
                             <Form className='mt-5'>
@@ -133,8 +133,8 @@ function Register() {
                         </Form>
                        
                 </Col>
-                <Col className='text-end align-items-center align-self-center'>
-                    <img src={plantRegister} style={{width:'400px',height:'400px'}} />
+                <Col className='text-center align-items-center align-self-center'>
+                    <img src={plantRegister} className='login-page-image mb-4' />
                 </Col>
             </Row>
             <br />

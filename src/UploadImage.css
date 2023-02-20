@@ -43,3 +43,58 @@ label .sc-bcXHqe {
     align-self: center!important;
 
 }
+
+
+/* Pop ups */
+
+.pictureExample {
+    width: 196px;
+    height: 196px;
+  }
+  
+  @media only screen and (max-width:768px) {
+  
+    .pictureExample {
+      width: 150px;
+      height: 150px;
+    }
+    
+  }
+  
+  @media only screen and (max-width:478px) {
+  
+    .pictureExample {
+      width: 110px;
+      height: 110px;
+    }
+    
+  }
+
+  @media only screen and (max-width:400px) {
+  
+    .pictureExample {
+      width: 96px;
+      height: 96px;
+    }
+    
+  }
+
+  @media only screen and (max-width:331px) {
+  
+    .pictureExample {
+      width: 75px;
+      height: 75px;
+    }
+    
+  }
+  
+  .crossIcon:hover {
+    cursor: pointer;
+    fill:black;
+    transition: 0.3s;
+    
+  }
+
+  .crossIcon {
+    fill:#555c79;
+  }
